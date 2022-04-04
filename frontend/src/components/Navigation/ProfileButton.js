@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
 import AddPhotoForm from "../Photo/AddPhotoForm";
+import PhotoComponentIndex from '../Photo/PhotoComponentIndex'
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
@@ -36,9 +37,6 @@ function ProfileButton({ user }) {
           <i className="fas fa-user-circle" />
         </div>
       </button>
-      <div>
-        <AddPhotoForm />
-      </div>
       {showMenu && (
         <ul className="profile-dropdown">
           <li>{user.username}</li>
@@ -48,6 +46,8 @@ function ProfileButton({ user }) {
           </li>
         </ul>
       )}
+      <AddPhotoForm />
+      <PhotoComponentIndex />
     </>
   );
 }

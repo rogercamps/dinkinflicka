@@ -20,7 +20,7 @@ const PhotoDetail = ({ id, userId, imageUrl, title }) => {
   return (
     <div className="photo-deta">
       <span className="photo-title">{photos.title}</span>
-      <img src={photos.imageUrl}></img>
+      <img src={photos.imageUrl} alt=''></img>
       <div>
         <button onClick={() => handleDelete(id)} className='delete-button'>
           Delete

@@ -4,7 +4,7 @@ import { getAllPhotos } from '../../store/photo'
 import DeletePhoto from './PhotoDetail';
 import './PhotoComponent.css'
 
-const Photos = () => {
+const PhotoComponentIndex = () => {
   const dispatch = useDispatch();
   const photos = useSelector(state => Object.values(state.photo));
   useEffect(() => {
@@ -17,7 +17,7 @@ const Photos = () => {
           {photos?.map((photo) => (
             <li key={photo.id} className='photo-li'>
               <span className='photo-title'>{photo.title}</span>
-              <img src={photo.imageUrl} className='photo-img'></img>
+              <img src={photo.imageUrl} className='photo-img' alt=''></img>
               <DeletePhoto />
             </li>
           ))}
@@ -26,4 +26,4 @@ const Photos = () => {
     </div>
   )
 }
-export default Photos
+export default PhotoComponentIndex

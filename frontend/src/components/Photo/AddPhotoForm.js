@@ -19,11 +19,11 @@ function AddPhotoForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const photoInfo = {
+    const payload = {
       title,
       imageUrl
     };
-    dispatch(createPhoto(photoInfo)); //create addPhotoReducer
+    dispatch(createPhoto(payload)); //create addPhotoReducer
     reset();
 
   };
