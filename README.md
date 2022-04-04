@@ -31,3 +31,5 @@ npm start
 - Once you are running the page on ```http://localhost:3000``` you will be able to `Login` as a randomized `demo-user` between the 4 seeded profiles in this project's database, or you may also `Signup` and create your own profile
 - When already logged in, you will be able to `post` and `delete` your own photos, as well as `favorite` and `comment` on other users' photos.
 - All pictures favorited by a user will be available to be seen in your `favorites` page
+
+Roger Camps
