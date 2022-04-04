@@ -40,10 +40,9 @@ const { Image } = db;
 // ];
 
 router.get('/', asyncHandler(async (req, res) => {
-  const photos = await Image.findAll();
-  return res.json({ photos });
-})
-);
+  const images = await Image.findAll();
+  return res.json({ images });
+}));
 
 router.post('/', requireAuth, asyncHandler(async (req, res) => {
   const userId = req.user.id;

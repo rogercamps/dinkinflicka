@@ -27,7 +27,7 @@ export const getAllPhotos = () => async (dispatch) => {
   const response = await fetch('/api/photos');
   if (response.ok) {
     const data = await response.json();
-    const photos = data.photos
+    const photos = data.images
     dispatch(viewPhotos(photos))
   }
 }
@@ -42,8 +42,7 @@ export const createPhoto = (payload) => async (dispatch) => {
 
   if (response.ok) {
     const data = await response.json();
-    console.log('add', data);
-    dispatch(addPhoto(data.photo));
+    dispatch(addPhoto(data.image));
   }
 }
 
@@ -67,6 +66,7 @@ const photoReducer = (state = initialState, action) => {
       action.payload.forEach(photo => (newState[photo.id] = photo));
       return newState;
     case ADD_PHOTO:
+      console.log(action.payload)
       newState = { ...state, [action.payload.id]: action.payload };
       return newState;
     case REMOVE_PHOTO:
