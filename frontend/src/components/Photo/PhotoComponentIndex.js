@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAllPhotos } from '../../store/photo'
+import './PhotoComponent.css'
 
 const Photos = () => {
   const dispatch = useDispatch();
@@ -11,10 +12,10 @@ const Photos = () => {
   return (
     <div>
       <div className='photos'>
-        <ul>
+        <ul className='photo-ul'>
           {photos?.map((photo) => (
-            <li key={photo.id}>
-              <img src={photo.imageUrl}></img>
+            <li key={photo.id} className='photo-li'>
+              <img src={photo.imageUrl} className='photo-img'></img>
             </li>
           ))}
         </ul>

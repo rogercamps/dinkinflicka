@@ -1,3 +1,31 @@
-ul {
+/* ul:child {
+  display: flex;
   max-width: 30%;
+  list-style-type: none;
+} */
+
+/* li {
+  display: flex;
+  max-width: 30%;
+  align-items: center;
+} */
+
+/* .photo-ul { */
+  /* max-width: 50px; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+/* } */
+
+.photo-li {
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 20px black;
+  display: flex;
+  /* align-items: center; */
+}
+
+.photo-img {
+  max-width: 600px;
+  max-height: 400px;
 }
