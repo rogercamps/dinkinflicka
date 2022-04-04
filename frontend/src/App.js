@@ -5,7 +5,7 @@ import SignupFormPage from "./components/SignupFormPage/SignupFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation/Navigation";
 import PhotoComponentIndex from "./components/Photo/PhotoComponentIndex";
-import DeletePhoto from "./components/Photo/DeletePhoto";
+import DeletePhoto from "./components/Photo/PhotoDetail";
 // import AddPhotoForm from "./components/Photo/AddPhotoForm";
 
 function App() {
