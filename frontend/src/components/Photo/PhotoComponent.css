@@ -1,0 +1,32 @@
+/* ul:child {
+  display: flex;
+  max-width: 30%;
+  list-style-type: none;
+} */
+
+/* li {
+  display: flex;
+  max-width: 30%;
+  align-items: center;
+} */
+
+/* .photo-ul { */
+  /* max-width: 50px; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+/* } */
+
+.photo-li {
+  display: flex;
+  /* align-items: center; */
+}
+
+.photo-img {
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 0 20px black;
+  padding: 10px;
+  width: 600px;
+  max-height: 400px;
+}
