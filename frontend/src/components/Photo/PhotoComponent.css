@@ -18,14 +18,15 @@
 /* } */
 
 .photo-li {
-  width: 100%;
-  max-width: 600px;
-  box-shadow: 0 0 20px black;
   display: flex;
   /* align-items: center; */
 }
 
 .photo-img {
-  max-width: 600px;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 0 20px black;
+  padding: 10px;
+  width: 600px;
   max-height: 400px;
 }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
-import { addPhoto } from "../../store/photo"
+import { createPhoto } from "../../store/photo"
 
 function AddPhotoForm() {
   const dispatch = useDispatch();
@@ -22,7 +22,7 @@ function AddPhotoForm() {
       title,
       imageUrl
     };
-    dispatch(addPhoto(photoInfo)); //create addPhotoReducer
+    dispatch(createPhoto(photoInfo)); //create addPhotoReducer
     reset();
 
   };

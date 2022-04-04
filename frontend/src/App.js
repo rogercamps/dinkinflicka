@@ -5,7 +5,7 @@ import SignupFormPage from "./components/SignupFormPage/SignupFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation/Navigation";
 import PhotoComponentIndex from "./components/Photo/PhotoComponentIndex";
-import AddPhotoForm from "./components/Photo/AddPhotoForm";
+// import AddPhotoForm from "./components/Photo/AddPhotoForm";
 
 function App() {
   const dispatch = useDispatch();
@@ -21,9 +21,8 @@ function App() {
         <Switch>
           <Route path="/signup">
             <SignupFormPage />
-          </Route>4
+          </Route>
           <PhotoComponentIndex />
-          <AddPhotoForm />
         </Switch>
       )}
     </>

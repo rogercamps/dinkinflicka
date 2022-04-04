@@ -15,6 +15,7 @@ const Photos = () => {
         <ul className='photo-ul'>
           {photos?.map((photo) => (
             <li key={photo.id} className='photo-li'>
+              <span>{photo.title}</span>
               <img src={photo.imageUrl} className='photo-img'></img>
             </li>
           ))}
