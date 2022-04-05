@@ -44,6 +44,11 @@ router.get('/', asyncHandler(async (req, res) => {
   return res.json({ images });
 }));
 
+// router.get('/:id', asyncHandler(async (req, res) => {
+//   const images = await Image.findAll();
+//   return res.json({ images });
+// }));
+
 router.post('/', requireAuth, asyncHandler(async (req, res) => {
   const userId = req.user.id;
   const { imageUrl, title } = req.body;
@@ -60,6 +65,13 @@ router.post('/', requireAuth, asyncHandler(async (req, res) => {
 //     next(productNotFoundError(req.params.id));
 //   }
 // });
+
+router.put('/:id(\\d+)', asyncHandler(async(req, res) => {
+  const image = await Image.findByPk(req.params.id);
+  image.title = req.body.title || image.title
+  await image.save()
+  res.json({ image })
+}))
 
 router.delete('/:id(\\d+)', async(req, res) => {
   const image = await Image.findByPk(req.params.id)

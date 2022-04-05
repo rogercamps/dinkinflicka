@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
 import AddPhotoForm from "../Photo/AddPhotoForm";
 import PhotoComponentIndex from '../Photo/PhotoComponentIndex'
+import UpdatePhoto from '../Photo/UpdatePhoto'
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
@@ -47,6 +48,7 @@ function ProfileButton({ user }) {
         </ul>
       )}
       <AddPhotoForm />
+      {/* <UpdatePhoto image={image} hideModal={hideModal} /> */}
       <PhotoComponentIndex />
     </>
   );
