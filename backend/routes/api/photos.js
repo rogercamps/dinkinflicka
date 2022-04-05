@@ -51,4 +51,20 @@ router.post('/', requireAuth, asyncHandler(async (req, res) => {
   return res.json({ image })
 }))
 
+// router.delete('/:id(\\d+)', async (req, res, next) => {
+//   const image = await Image.findByPk(req.params.id);
+//   if (image) {
+//     await image.destroy();
+//     res.status(204).end();
+//   } else {
+//     next(productNotFoundError(req.params.id));
+//   }
+// });
+
+router.delete('/:id(\\d+)', async(req, res) => {
+  const image = await Image.findByPk(req.params.id)
+  await image.destroy()
+  res.status(204).end()
+})
+
 module.exports = router;

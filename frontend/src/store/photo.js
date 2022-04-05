@@ -20,7 +20,8 @@ export const addPhoto = (payload) => { // change to addOnePhoto
 const removePhoto = (id) => {
   return {
     type: REMOVE_PHOTO,
-    payload: id };
+    payload: id
+  };
 };
 
 export const getAllPhotos = () => async (dispatch) => {
@@ -47,10 +48,9 @@ export const createPhoto = (payload) => async (dispatch) => {
 }
 
 export const deletePhoto = (id) => async (dispatch) => {
-  const response = await fetch(`/api/photos/${id}`, {
+  const response = await csrfFetch(`/api/photos/${id}`, {
     method: 'DELETE'
   });
-
   if (response.ok) {
     dispatch(removePhoto(id));
   }

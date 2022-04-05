@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAllPhotos } from '../../store/photo'
-import DeletePhoto from './PhotoDetail';
+import PhotoDetail from './PhotoDetail';
 import './PhotoComponent.css'
 
 const PhotoComponentIndex = () => {
@@ -18,7 +18,7 @@ const PhotoComponentIndex = () => {
             <li key={photo.id} className='photo-li'>
               <span className='photo-title'>{photo.title}</span>
               <img src={photo.imageUrl} className='photo-img' alt=''></img>
-              <DeletePhoto />
+              <PhotoDetail id={photo.id} />
             </li>
           ))}
         </ul>

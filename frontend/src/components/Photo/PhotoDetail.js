@@ -18,7 +18,7 @@ const PhotoDetail = ({ id, userId, imageUrl, title }) => {
   };
 
   return (
-    <div className="photo-deta">
+    <div className="photo-detail">
       <span className="photo-title">{photos.title}</span>
       <img src={photos.imageUrl} alt=''></img>
       <div>
