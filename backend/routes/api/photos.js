@@ -44,10 +44,11 @@ router.get('/', asyncHandler(async (req, res) => {
   return res.json({ images });
 }));
 
-// router.get('/:id', asyncHandler(async (req, res) => {
-//   const images = await Image.findAll();
-//   return res.json({ images });
-// }));
+router.get('/:id', asyncHandler(async (req, res) => {
+  const id = +req.params.id;
+  const images = await Image.findByPk(id);
+  return res.json({ images });
+}));
 
 router.post('/', requireAuth, asyncHandler(async (req, res) => {
   const userId = req.user.id;

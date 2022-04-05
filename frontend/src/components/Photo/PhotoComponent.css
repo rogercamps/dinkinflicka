@@ -32,3 +32,8 @@
   width: 300px;
   max-height: 400px;
 }
+
+.pthoto-detail-image {
+  width: 700px;
+  /* max-height: 400px; */
+}

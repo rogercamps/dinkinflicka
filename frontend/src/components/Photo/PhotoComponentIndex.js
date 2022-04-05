@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAllPhotos } from '../../store/photo'
-import PhotoDetail from './PhotoDetail';
 import './PhotoComponent.css'
 import { Route, NavLink } from 'react-router-dom'
 
@@ -16,18 +15,15 @@ const PhotoComponentIndex = () => {
   return (
     <main>
       <nav>
-        {photos.map(photo => {
+        {photos?.map(photo => {
           return (
-            <NavLink key={photo.id} to={`/photos/${photo.id}`}>
-              {photo.title}
-              {/* <img src={photo.imageUrl} className='photo-img' alt=''></img> */}
+            <NavLink key={photo?.id} to={`/photos/${photo.id}`}>
+              {photo?.title}
+              <img src={photo?.imageUrl} className='photo-img' alt=''></img>
             </NavLink>
           )
         })}
       </nav>
-      <Route path='/photos/:photoId'>
-        <PhotoDetail />
-      </Route>
     </main>
   )
 }

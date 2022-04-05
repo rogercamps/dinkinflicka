@@ -94,6 +94,8 @@ export const deletePhoto = (id) => async (dispatch) => {
   }
 };
 
+
+
 const initialState = {}
 
 const photoReducer = (state = initialState, action) => {
@@ -108,7 +110,9 @@ const photoReducer = (state = initialState, action) => {
       newState = { ...state, [action.payload.id]: action.payload };
       return newState;
     case UPDATE_PHOTO:
-      return { ...state, [action.payload.id]: action.payload }
+      return { ...state, [action.payload.id]: {...state[action.payload], ...action.payload} }
+    case SINGLE_PHOTO:
+      return { ...state, [action.payload.id]: {...state[action.payload], ...action.payload} }
     case REMOVE_PHOTO:
       newState = { ...state };
       delete newState[action.payload];
