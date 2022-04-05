@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { deletePhoto, getOnePhoto, updatePhoto } from '../../store/photo'
+import { deletePhoto, getOnePhoto, updatePhoto, getAllPhotos } from '../../store/photo'
 import './PhotoComponent.css'
 import { useParams } from 'react-router-dom';
 
@@ -14,9 +14,9 @@ const PhotoDetail = () => {
     dispatch(deletePhoto(photoId));
   };
 
-  // useEffect(() => {
-  //   dispatch(getOnePhoto(photoId))
-  // }, [dispatch, photoId])
+  useEffect(() => {
+    dispatch(getAllPhotos(photoId))
+  }, [dispatch, photoId])
 
   return (
     <div className="photo-detail">
