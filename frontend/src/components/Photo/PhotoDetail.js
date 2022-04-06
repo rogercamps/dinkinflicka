@@ -25,7 +25,7 @@ const PhotoDetail = () => {
 
   const sessionUser = useSelector(state => state.session.user)
 
-  console.log('======================', photo);
+
   return (
     <div className="photo-detail-div">
       <span className="photo-detail-title">{photo?.title}</span>

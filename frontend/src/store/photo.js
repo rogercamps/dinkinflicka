@@ -104,7 +104,6 @@ const photoReducer = (state = initialState, action) => {
       action.payload.forEach(photo => (newState[photo.id] = photo));
       return newState;
     case ADD_PHOTO:
-      console.log(action.payload)
       newState = { ...state, [action.payload.id]: action.payload };
       return newState;
     case UPDATE_PHOTO:
