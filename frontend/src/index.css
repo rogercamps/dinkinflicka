@@ -17,8 +17,10 @@
   justify-content: space-around;
 }
 
+
+
 .nav-login-modal {
-  background-color: red;;
+  background-color: #349ce4;
 }
 
 .photo-title {
@@ -27,13 +29,13 @@
 
 .photo-index-navlink {
   max-width: 500px;
-  background-color: red;
+  background-color: #648cac;
   box-shadow: 0 0 20px black;
   border: 2px solid pink;
 
 }
 .photo-index-nav {
-  background-color: green;
+  background-color: #b2b6b0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -56,7 +58,7 @@
 }
 
 .photo-detail-title {
-  background-color: yellow;
+  background-color: #1c4c74;
   margin: 5vh;
 }
 
@@ -90,7 +92,7 @@
 }
 
 .photo-nav {
-  background-color: blue;
+  background-color: #354551;
 }
 
 .photo-detail-div {
