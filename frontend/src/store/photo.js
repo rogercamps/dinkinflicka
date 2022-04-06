@@ -79,8 +79,8 @@ export const editPhoto = (payload) => async (dispatch) => {
     body: JSON.stringify(payload)
   })
   if (response.ok) {
-    const data = await response.json()
-    const updatedPhoto = data.title
+    const data = await response.json();
+    const updatedPhoto = data.image.title;
     dispatch(updatePhoto(updatedPhoto))
   }
 }
@@ -110,7 +110,8 @@ const photoReducer = (state = initialState, action) => {
       newState = { ...state, [action.payload.id]: action.payload };
       return newState;
     case UPDATE_PHOTO:
-      return { ...state, [action.payload.id]: {...state[action.payload], ...action.payload} }
+      return { ...state, [action.payload.id]: action.payload}
+      // return { ...state, [action.payload.id]: {...state[action.payload], ...action.payload} }
     case SINGLE_PHOTO:
       return {...state, [action.payload.id]: action.payload}
     case REMOVE_PHOTO:

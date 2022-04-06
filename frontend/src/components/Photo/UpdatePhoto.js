@@ -1,32 +1,42 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { Redirect } from "react-router-dom";
-import editPhoto from '../../store/photo'
+import { useParams } from "react-router-dom";
+import { editPhoto, getAllPhotos } from '../../store/photo'
 
 
-
-function UpdatePhoto({ image, hideModal }) {
+function UpdatePhoto({ photo, hideModal }) {
   const dispatch = useDispatch();
-  const [title, setTitle] = useState(image.title);
+  const { photoId } = useParams();
+  const [title, setTitle] = useState(photo.title);
+  console.log('-------------data+++++++++', photo);
   const [errors, setErrors] = useState([]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const payload = {
-      ...image,
+      ...photo,
       title
     };
 
+    const updatedTitle = await dispatch(editPhoto(payload));
+    if (updatedTitle) {
+      hideModal()
+    }
+
     await dispatch(editPhoto(payload));
-    hideModal()
   };
 
-  const handleCancelClick = (e) => {
+  useEffect(() => {
+    dispatch(getAllPhotos(photoId))
+  }, [dispatch, photoId])
+
+  const handleUpdateClick = (e) => {
     e.preventDefault()
     hideModal()
   };
+
   return (
     <form onSubmit={handleSubmit}>
       <ul>
@@ -43,7 +53,7 @@ function UpdatePhoto({ image, hideModal }) {
           />
         </label>
         <button type="submit">Edit Title</button>
-        <button type="button" onClick={handleCancelClick}>Cancel</button>
+        <button type="button" onClick={handleUpdateClick}>Cancel</button>
       </div>
     </form>
   );
