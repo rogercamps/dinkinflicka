@@ -24,10 +24,8 @@ const PhotoDetail = () => {
   }, [dispatch, photoId]);
 
   const sessionUser = useSelector(state => state.session.user)
-  // const image = useSelector(state => state.image[image.id])
 
   console.log('======================', photo);
-  // console.log('==========userId============', photo.userId);
   return (
     <div className="photo-detail-div">
       <span className="photo-detail-title">{photo?.title}</span>
