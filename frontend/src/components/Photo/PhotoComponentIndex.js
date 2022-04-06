@@ -14,12 +14,12 @@ const PhotoComponentIndex = () => {
 
   return (
     <main>
-      <nav>
+      <nav className="photo-index-nav">
         {photos?.map(photo => {
           return (
-            <NavLink key={photo?.id} to={`/photos/${photo.id}`}>
+            <NavLink key={photo?.id} to={`/photos/${photo.id}`} className="photo-index-navlink">
               {photo?.title}
-              <img src={photo?.imageUrl} className='photo-img' alt=''></img>
+              <img src={photo?.imageUrl} className='photo-index-img' alt=''></img>
             </NavLink>
           )
         })}

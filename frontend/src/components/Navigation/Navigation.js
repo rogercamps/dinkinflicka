@@ -16,14 +16,14 @@ function Navigation({ isLoaded }) {
   } else {
     sessionLinks = (
       <>
-        <LoginFormModal />
-        <NavLink to="/signup">Sign Up</NavLink>
+        <LoginFormModal className='nav-login-modal' />
+        <NavLink to="/signup" className='nav-signup'>Sign Up</NavLink>
       </>
     );
   }
 
   return (
-    <ul>
+    <ul className='navbar'>
       <NavLink exact to="/"><img id="navBarLogo" src="/images/dinkinFlicka.png" alt=""></img></NavLink>
       {isLoaded && sessionLinks}
     </ul>

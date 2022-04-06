@@ -39,6 +39,7 @@ const { Image } = db;
 //   handleValidationErrors
 // ];
 
+
 router.get('/', asyncHandler(async (req, res) => {
   const images = await Image.findAll();
   return res.json({ images });

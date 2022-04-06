@@ -13,7 +13,7 @@ function AddPhotoForm() {
   useEffect(() => {
     const errors = [];
     if (title.length > 25) errors.push('Title should be 25 characters or less')
-    if (title.length === 0) errors.push("Title can't be blank")
+    // if (title.length <= 1) errors.push("Title can't be blank")
     setErrors(errors)
   }, [title])
 

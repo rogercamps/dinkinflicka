@@ -48,8 +48,6 @@ function ProfileButton({ user }) {
         </ul>
       )}
       <AddPhotoForm />
-      {/* <UpdatePhoto image={image} hideModal={hideModal} /> */}
-      {/* <PhotoComponentIndex /> */}
     </>
   );
 }

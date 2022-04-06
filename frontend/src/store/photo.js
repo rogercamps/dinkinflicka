@@ -112,7 +112,7 @@ const photoReducer = (state = initialState, action) => {
     case UPDATE_PHOTO:
       return { ...state, [action.payload.id]: {...state[action.payload], ...action.payload} }
     case SINGLE_PHOTO:
-      return { ...state, [action.payload.id]: {...state[action.payload], ...action.payload} }
+      return {...state, [action.payload.id]: action.payload}
     case REMOVE_PHOTO:
       newState = { ...state };
       delete newState[action.payload];

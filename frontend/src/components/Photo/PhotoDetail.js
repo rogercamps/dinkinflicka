@@ -9,7 +9,6 @@ const PhotoDetail = () => {
   const dispatch = useDispatch();
   const { photoId } = useParams();
   const photo = useSelector(state => state.photo[photoId])
-  console.log('-----------photo+++++++++++',photo);
   const handleDelete = (photoId) => {
     dispatch(deletePhoto(photoId));
   };
@@ -19,11 +18,11 @@ const PhotoDetail = () => {
   }, [dispatch, photoId])
 
   return (
-    <div className="photo-detail">
-      <span className="photo-title">{photo?.title}Test TExt</span>
+    <div className="photo-detail-div">
+      <span className="photo-detail-title">{photo?.title}</span>
       <img src={photo?.imageUrl} alt='' className='photo-detail-image'></img>
       <div>
-        <button onClick={() => handleDelete(photoId)} className='delete-button'>
+        <button onClick={() => handleDelete(photoId)} className='photo-detail-delete-btn'>
           Delete
         </button>
       </div>

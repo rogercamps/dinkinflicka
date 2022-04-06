@@ -1,8 +1,114 @@
 /* TODO Add site wide styles */
-* html {
-  font-family: 'Oswald';
+* {
+  font-family: 'American Typewriter'
+}
+
+.navbar {
+  background-color: black;
+  display: flex;
+  color: white;
+  width: 100%;
+  top: 0;
+  min-width: 100%;
+  padding: 15px;
+  /* position: fixed; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav-login-modal {
+  background-color: red;;
 }
 
 .photo-title {
   font-family: 'American Typewriter'
   }
+
+.photo-index-navlink {
+  max-width: 500px;
+  background-color: red;
+  box-shadow: 0 0 20px black;
+  border: 2px solid pink;
+
+}
+.photo-index-nav {
+  background-color: green;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.photo-index-navlink:hover {
+  transform: scale(1.05);
+}
+.photo-index-img {
+  width: 500px;
+  background-color: pink;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  max-height: 300px;
+
+}
+.photo-navlink {
+  background-color: aqua;
+}
+
+.photo-detail-title {
+  background-color: yellow;
+  margin: 5vh;
+}
+
+.photo-detail-delete-btn {
+  margin: 5vh;
+  background: red;
+  font-size: 15px;
+  border-radius: 5px;
+}
+.photo-detail-delete-btn:hover {
+  background: red;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px aqua,
+              0 0 25px aqua,
+              0 0 50px aqua,
+              0 0 100px aqua;
+              font-size: 15px;
+}
+
+.photo-detail-delete-btn:active {
+  /* transform: translateY(2px); */
+  background: red;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px aqua,
+              0 0 25px aqua,
+              0 0 50px aqua,
+              0 0 100px aqua;
+              font-size: 15px;
+}
+
+.photo-nav {
+  background-color: blue;
+}
+
+.photo-detail-div {
+  /* background-color: fuchsia; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5vh;
+}
+.photo-detail-image {
+  width: 900px;
+
+}
+.photo-detail-div:child {
+  margin: 20px;
+}
+
+img {
+  border-radius: 5px;
+}
