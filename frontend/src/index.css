@@ -112,3 +112,15 @@
 img {
   border-radius: 5px;
 }
+
+.edit-title-modal {
+  margin: 30px;
+  color: red;
+  height: 50px;
+}
+
+#modal-content {
+  margin: 30px;
+  color: red;
+  height: 50px;
+}

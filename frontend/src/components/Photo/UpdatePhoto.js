@@ -20,12 +20,13 @@ function UpdatePhoto({ photo, hideModal }) {
       title
     };
 
-    const updatedTitle = await dispatch(editPhoto(payload));
-    if (updatedTitle) {
-      hideModal()
-    }
+    // const updatedTitle = await dispatch(editPhoto(payload));
+    // if (updatedTitle) {
+    //   hideModal()
+    // }
 
     await dispatch(editPhoto(payload));
+    hideModal()
   };
 
   useEffect(() => {
