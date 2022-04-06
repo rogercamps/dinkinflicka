@@ -9,7 +9,6 @@ function UpdatePhoto({ photo, hideModal }) {
   const dispatch = useDispatch();
   const { photoId } = useParams();
   const [title, setTitle] = useState(photo.title);
-  console.log('-------------data+++++++++', photo);
   const [errors, setErrors] = useState([]);
 
   const handleSubmit = async (e) => {
@@ -20,18 +19,13 @@ function UpdatePhoto({ photo, hideModal }) {
       title
     };
 
-    // const updatedTitle = await dispatch(editPhoto(payload));
-    // if (updatedTitle) {
-    //   hideModal()
-    // }
-
     await dispatch(editPhoto(payload));
     hideModal()
   };
 
-  useEffect(() => {
-    dispatch(getAllPhotos(photoId))
-  }, [dispatch, photoId])
+  // useEffect(() => {
+  //   dispatch(getAllPhotos(photoId))
+  // }, [dispatch, photoId]);
 
   const handleUpdateClick = (e) => {
     e.preventDefault()

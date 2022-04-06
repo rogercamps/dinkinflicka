@@ -19,7 +19,7 @@ const PhotoDetail = () => {
 
   useEffect(() => {
     dispatch(getAllPhotos(photoId))
-  }, [dispatch, photoId])
+  }, [dispatch, photoId, photo]);
 
   return (
     <div className="photo-detail-div">
