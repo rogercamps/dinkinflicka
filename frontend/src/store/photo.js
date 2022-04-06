@@ -80,7 +80,7 @@ export const editPhoto = (payload) => async (dispatch) => {
   })
   if (response.ok) {
     const data = await response.json();
-    const updatedPhoto = data.image.title;
+    const updatedPhoto = data.image;
     dispatch(updatePhoto(updatedPhoto))
   }
 }

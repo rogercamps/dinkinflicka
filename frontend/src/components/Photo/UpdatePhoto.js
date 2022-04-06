@@ -23,9 +23,9 @@ function UpdatePhoto({ photo, hideModal }) {
     hideModal()
   };
 
-  // useEffect(() => {
-  //   dispatch(getAllPhotos(photoId))
-  // }, [dispatch, photoId]);
+  useEffect(() => {
+    dispatch(getAllPhotos(photoId))
+  }, [dispatch, photoId]);
 
   const handleUpdateClick = (e) => {
     e.preventDefault()
