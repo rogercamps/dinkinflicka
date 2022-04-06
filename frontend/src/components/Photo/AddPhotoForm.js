@@ -4,29 +4,36 @@ import { Redirect } from "react-router-dom";
 import { createPhoto } from "../../store/photo"
 import './PhotoComponent.css'
 
+
 function AddPhotoForm() {
   const dispatch = useDispatch();
   const [title, setTitle] = useState("");
   const [imageUrl, setImageUrl] = useState("");
-  const [errors, setErrors] = useState([]);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
+  const [validationErrors, setValidationErrors] = useState([]);
 
   useEffect(() => {
-    console.log(imageUrl.match(/(jpe?g|tiff|png|gif|bmp)$/));
     const errors = [];
     if (title.length > 25) errors.push('Title should be 25 characters or less')
-    if (imageUrl.match(/(jpe?g|tiff|png|gif|bmp)$/) === null) errors.push('This image link is not an accepted format')
-    setErrors(errors)
+    if (title.length === 0) errors.push("Title can't be black")
+    if (imageUrl.match(/(jpe?g|tiff|png|gif|bmp)/) === null) errors.push('This image link is not an accepted format')
+    setValidationErrors(errors)
   }, [title, imageUrl])
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    setHasSubmitted(true);
+    if (validationErrors.length) return alert(`Cannot Submit`);
+
     const payload = {
       title,
       imageUrl
     };
-    dispatch(createPhoto(payload)); //create addPhotoReducer
+    dispatch(createPhoto(payload));
     reset();
-
+    setHasSubmitted(false);
+    setValidationErrors([]);
   };
 
   const reset = () => {
@@ -37,7 +44,13 @@ function AddPhotoForm() {
   return (
     <form onSubmit={handleSubmit}>
       <ul>
-        {errors.map((error, idx) => <li key={idx}>{error}</li>)}
+        {hasSubmitted && validationErrors.length > 0 && (
+          <div>
+            <ul>
+              {validationErrors.map((error, idx) => <li key={idx}>{error}</li>)}
+            </ul>
+          </div>
+          )}
       </ul>
       <label>
         Title
@@ -45,7 +58,7 @@ function AddPhotoForm() {
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          required
+          // required
         />
       </label>
       <label>
@@ -54,7 +67,7 @@ function AddPhotoForm() {
           type="text"
           value={imageUrl}
           onChange={(e) => setImageUrl(e.target.value)}
-          required
+          // required
         />
       </label>
       <button type="submit">Submit photo</button>
