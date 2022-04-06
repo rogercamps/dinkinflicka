@@ -4,7 +4,9 @@ import { deletePhoto, getOnePhoto, updatePhoto, getAllPhotos } from '../../store
 import './PhotoComponent.css'
 import { useParams, useHistory } from 'react-router-dom';
 import UpdatePhoto from './UpdatePhoto';
-import {Modal} from '../../context/Modal'
+import { Modal } from '../../context/Modal'
+
+
 
 const PhotoDetail = () => {
   const dispatch = useDispatch();
@@ -19,24 +21,35 @@ const PhotoDetail = () => {
 
   useEffect(() => {
     dispatch(getAllPhotos(photoId))
-  }, [dispatch, photoId, photo]);
+  }, [dispatch, photoId]);
 
+  const sessionUser = useSelector(state => state.session.user)
+  // const image = useSelector(state => state.image[image.id])
+
+  console.log('======================', photo);
+  // console.log('==========userId============', photo.userId);
   return (
     <div className="photo-detail-div">
       <span className="photo-detail-title">{photo?.title}</span>
       <img src={photo?.imageUrl} alt='' className='photo-detail-image'></img>
       <div className='edit-title-modal'>
-        <button onClick={() => setShowModal(true)}>Edit</button>
-        {showModal && (
-          <Modal onClose={() => setShowModal(false)}>
-            <UpdatePhoto photo={photo} hideModal={() => setShowModal(false)} />
-          </Modal>
+        {sessionUser && sessionUser?.id === photo?.userId && (
+          <>
+            <button onClick={() => setShowModal(true)}>Edit</button>
+            <button onClick={() => handleDelete(photoId)} className='photo-detail-delete-btn'>
+              Delete
+            </button>
+            {showModal && (
+              <>
+                <Modal onClose={() => setShowModal(false)}>
+                  <UpdatePhoto photo={photo} hideModal={() => setShowModal(false)} />
+                </Modal>
+              </>
+            )}
+          </>
         )}
       </div>
       <div>
-        <button onClick={() => handleDelete(photoId)} className='photo-detail-delete-btn'>
-          Delete
-        </button>
       </div>
     </div>
   )

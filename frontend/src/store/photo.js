@@ -94,8 +94,6 @@ export const deletePhoto = (id) => async (dispatch) => {
   }
 };
 
-
-
 const initialState = {}
 
 const photoReducer = (state = initialState, action) => {
