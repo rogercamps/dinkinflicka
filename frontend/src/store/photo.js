@@ -1,9 +1,9 @@
 import { csrfFetch } from './csrf';
-const SINGLE_PHOTO = 'photo/photoId'
-const ALL_PHOTOS = 'user/allPhotos'
-const ADD_PHOTO = 'user/addPhoto'
-const UPDATE_PHOTO = 'user/updatePhoto'
-const REMOVE_PHOTO = 'user/removePhoto'
+const SINGLE_PHOTO = 'photo/photoId';
+const ALL_PHOTOS = 'user/allPhotos';
+const ADD_PHOTO = 'user/addPhoto';
+const UPDATE_PHOTO = 'user/updatePhoto';
+const REMOVE_PHOTO = 'user/removePhoto';
 
 const singlePhoto = (payload) => {
   return {

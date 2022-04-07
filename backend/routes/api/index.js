@@ -3,8 +3,11 @@ const app = require('../../app.js');
 const sessionRouter = require('./session.js');
 const usersRouter = require('./users.js');
 const photosRouter = require('./photos.js');
+const commentsRouter = require('./comments.js');
 
-router.use('/photos', photosRouter)
+router.use('/photos', photosRouter);
+
+router.use('/comments', commentsRouter);
 
 router.use('/session', sessionRouter);
 
