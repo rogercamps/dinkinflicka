@@ -58,7 +58,6 @@ export const getAllPhotos = () => async (dispatch) => {
   }
 }
 
-
 export const createPhoto = (payload) => async (dispatch) => {
   const response = await csrfFetch('/api/photos', {
     method: 'POST',

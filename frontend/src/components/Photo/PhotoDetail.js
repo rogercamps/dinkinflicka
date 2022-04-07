@@ -5,8 +5,9 @@ import './PhotoComponent.css'
 import { useParams, useHistory } from 'react-router-dom';
 import UpdatePhoto from './UpdatePhoto';
 import { Modal } from '../../context/Modal'
+import CommentComponentIndex from '../Comment/CommentComponentIndex'
 
-
+// frontend/src/components/Comment/CommentComponentIndex.js
 
 const PhotoDetail = () => {
   const dispatch = useDispatch();
@@ -30,6 +31,7 @@ const PhotoDetail = () => {
     <div className="photo-detail-div">
       <span className="photo-detail-title">{photo?.title}</span>
       <img src={photo?.imageUrl} alt='' className='photo-detail-image'></img>
+      <CommentComponentIndex />
       <div className='edit-title-modal'>
         {sessionUser && sessionUser?.id === photo?.userId && (
           <>
