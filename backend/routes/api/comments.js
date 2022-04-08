@@ -13,4 +13,12 @@ router.get('/', asyncHandler(async (req, res) => {
   return res.json({ comments });
 }));
 
+router.post('/', requireAuth, asyncHandler(async (req, res) => {
+  const userId = req.user.id;
+  const { comment, imageId } = req.body;
+  const commentText = await Comment.create({ userId, comment, imageId })
+  return res.json({ commentText })
+}))
+
+
 module.exports = router;

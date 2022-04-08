@@ -2,12 +2,12 @@ import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { deletePhoto, getOnePhoto, updatePhoto, getAllPhotos } from '../../store/photo'
 import './PhotoComponent.css'
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams, useHistory, Route } from 'react-router-dom';
 import UpdatePhoto from './UpdatePhoto';
-import { Modal } from '../../context/Modal'
-import CommentComponentIndex from '../Comment/CommentComponentIndex'
+import { Modal } from '../../context/Modal';
+import CommentComponentIndex from '../Comment/CommentComponentIndex';
+import AddCommentComponent from '../Comment/AddCommentComponent';
 
-// frontend/src/components/Comment/CommentComponentIndex.js
 
 const PhotoDetail = () => {
   const dispatch = useDispatch();
@@ -25,7 +25,6 @@ const PhotoDetail = () => {
   }, [dispatch, photoId]);
 
   const sessionUser = useSelector(state => state.session.user)
-
 
   return (
     <div className="photo-detail-div">
@@ -46,6 +45,9 @@ const PhotoDetail = () => {
                 </Modal>
               </>
             )}
+            {/* <Route path="/photo/:photoId/comment"> */}
+              <AddCommentComponent imageId={photoId} />
+            {/* </Route> */}
           </>
         )}
       </div>

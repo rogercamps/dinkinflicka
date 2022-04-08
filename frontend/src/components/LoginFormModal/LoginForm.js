@@ -44,6 +44,10 @@ function LoginForm() {
           required
         />
       </label>
+      <button onClick={e => {
+        setCredential("PrisonMike");
+        setPassword("dementors");
+      }} type="submit">Demo User Login</button>
       <button type="submit">Log In</button>
     </form>
   );
