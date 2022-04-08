@@ -1,13 +1,17 @@
-import { Route, NavLink, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getAllComments } from '../../store/comment'
+import { getAllComments, deleteComment } from '../../store/comment'
 import './CommentComponent.css'
 
 const CommentComponentIndex = () => {
   const dispatch = useDispatch();
   const { photoId } = useParams()
   const comments = useSelector(state => Object.values(state.comment));
+
+  const handleDelete = (photoId) => {
+    dispatch(deleteComment(photoId));
+  };
 
   useEffect(() => {
     dispatch(getAllComments());
@@ -19,6 +23,9 @@ const CommentComponentIndex = () => {
         {comments.filter(comment => comment.imageId === +photoId).map(comment =>
           <div key={comment?.id} className="comment-index-div">
             {comment?.comment}
+            <button onClick={() => handleDelete(comment?.id)} className='comment-delete-btn'>
+              Delete
+            </button>
           </div>
         )}
       </nav>

@@ -75,10 +75,10 @@ router.put('/:id(\\d+)', asyncHandler(async(req, res) => {
   res.json({ image })
 }))
 
-router.delete('/:id(\\d+)', async(req, res) => {
-  const image = await Image.findByPk(req.params.id)
-  await image.destroy()
-  res.status(204).end()
-})
+// router.delete('/:id(\\d+)', async(req, res) => {
+//   const image = await Image.findByPk(req.params.id)
+//   await image.destroy()
+//   res.status(204).end()
+// })
 
 module.exports = router;

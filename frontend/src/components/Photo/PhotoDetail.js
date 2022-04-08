@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { deletePhoto, getOnePhoto, updatePhoto, getAllPhotos } from '../../store/photo'
+import { deletePhoto, getAllPhotos } from '../../store/photo'
 import './PhotoComponent.css'
 import { useParams, useHistory, Route } from 'react-router-dom';
 import UpdatePhoto from './UpdatePhoto';
@@ -45,12 +45,10 @@ const PhotoDetail = () => {
                 </Modal>
               </>
             )}
-            {/* <Route path="/photo/:photoId/comment"> */}
-              <AddCommentComponent imageId={photoId} />
-            {/* </Route> */}
           </>
         )}
       </div>
+        <AddCommentComponent imageId={photoId} />
       <div>
       </div>
     </div>

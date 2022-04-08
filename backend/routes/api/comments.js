@@ -17,8 +17,19 @@ router.post('/', requireAuth, asyncHandler(async (req, res) => {
   const userId = req.user.id;
   const { comment, imageId } = req.body;
   const commentText = await Comment.create({ userId, comment, imageId })
-  return res.json({ commentText })
+  return res.json({ comment: commentText })
 }))
 
+router.delete('/:id(\\d+)', async (req, res) => {
+  const comment = await Comment.findByPk(req.params.id)
+  console.log('re.params:', req.params.id);
+  if (comment) {
+    await comment.destroy();
+    res.status(204).end();
+  } else {
+    console.log('That did not work');
+    next(productNotFoundError(req.params.id))
+  }
+})
 
 module.exports = router;
