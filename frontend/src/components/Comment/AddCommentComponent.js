@@ -72,22 +72,6 @@ const AddComment = ({ imageId }) => {
           type="text"
           value={comment}
           onChange={(e) => setComment(e.target.value)}
-          // onBlur={(e) => setShowErrors(false)}
-          // onBlur={(e) => {
-            // if (e.currentTarget === e.target) {
-              // setComment('')
-              // setShowErrors(false)
-            // } else {
-            //   console.log('unfocused child', e.target);
-            // }
-            // if (!e.currentTarget.contains(e.relatedTarget)) {
-            //   // Not triggered when swapping focus between children
-            //   console.log('out of comment box');
-            //   setValidationErrors([])
-            // }
-          // }}
-
-        // required
         />
       </label>
     </form>

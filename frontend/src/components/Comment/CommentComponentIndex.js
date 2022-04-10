@@ -32,7 +32,10 @@ const CommentComponentIndex = () => {
       <nav className="comment-index-nav">
         {comments.filter(comment => comment.imageId === +photoId).map(comment =>
           <div key={comment?.id} className="comment-index-div">
-            {comment?.comment}
+            <div>
+              <span>{comment?.User.username} said:</span>
+              {comment?.comment}
+            </div>
             {sessionUser && sessionUser?.id === comment?.userId && (
               <button onClick={() => handleDelete(comment?.id)} className='comment-delete-btn'>
                 Delete
