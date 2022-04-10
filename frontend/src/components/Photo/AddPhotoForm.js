@@ -10,6 +10,7 @@ function AddPhotoForm() {
   const [imageUrl, setImageUrl] = useState("");
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [validationErrors, setValidationErrors] = useState([]);
+  const [showErrors, setShowErrors] = useState(false);
 
   useEffect(() => {
     const errors = [];
@@ -19,11 +20,32 @@ function AddPhotoForm() {
     setValidationErrors(errors)
   }, [title, imageUrl])
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
+  // useEffect(() => {
+  //   if (title.length < 1) {
+  //     setShowErrors(false)
+  //   }
+  //   if (imageUrl.length < 1) {
+  //     setShowErrors(false)
+  //   }
+  // }, [title, imageUrl])
 
-    setHasSubmitted(true);
-    if (validationErrors.length) return alert(`Cannot Submit`);
+  useEffect(() => {
+    if (!showErrors) return;
+    const closeErrors = () => {
+      setShowErrors(false);
+    };
+    document.addEventListener('click', closeErrors)
+    reset();
+    return () => document.removeEventListener("click", closeErrors);
+  }, [showErrors]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setShowErrors(true);
+
+    if (validationErrors.length) {
+      return setHasSubmitted(true);
+    }
 
     const payload = {
       title,
@@ -33,6 +55,7 @@ function AddPhotoForm() {
     reset();
     setHasSubmitted(false);
     setValidationErrors([]);
+    setShowErrors(false);
   };
 
   const reset = () => {
@@ -46,10 +69,12 @@ function AddPhotoForm() {
         {hasSubmitted && validationErrors.length > 0 && (
           <div>
             <ul>
-              {validationErrors.map((error, idx) => <li key={idx}>{error}</li>)}
+              {showErrors && (
+                validationErrors.map((error, idx) => <li key={idx}>{error}</li>)
+              )}
             </ul>
           </div>
-          )}
+        )}
       </ul>
       <label>
         Title
@@ -57,7 +82,7 @@ function AddPhotoForm() {
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          // required
+        // required
         />
       </label>
       <label>
@@ -66,7 +91,7 @@ function AddPhotoForm() {
           type="text"
           value={imageUrl}
           onChange={(e) => setImageUrl(e.target.value)}
-          // required
+        // required
         />
       </label>
       <button type="submit">Submit photo</button>

@@ -24,6 +24,7 @@ const PhotoDetail = () => {
     dispatch(getAllPhotos(photoId))
   }, [dispatch, photoId]);
 
+
   const sessionUser = useSelector(state => state.session.user)
 
   return (

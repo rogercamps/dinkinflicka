@@ -3,23 +3,28 @@ import { useDispatch } from "react-redux";
 import { createComment } from "../../store/comment"
 import './CommentComponent.css'
 
-const AddComment = ({imageId}) => {
+const AddComment = ({ imageId }) => {
   const dispatch = useDispatch();
   const [comment, setComment] = useState('');
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [validationErrors, setValidationErrors] = useState([]);
+  const [showErrors, setShowErrors] = useState(false);
 
   useEffect(() => {
     const errors = [];
     if (comment.length > 25) errors.push('Comment should be 1000 characters or less');
-    if (comment.length === 0) errors.push("Comment can't be blank");
+    if (comment.length < 2) errors.push("Comment must be 2 characters or more");
+    setValidationErrors(errors)
   }, [comment]);
+
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    setShowErrors(true);
 
-    setHasSubmitted(true);
-    if (validationErrors.length) return alert(`Cannot Submit`);
+    if (validationErrors.length) {
+      return setHasSubmitted(true);
+    }
 
     const payload = {
       comment,
@@ -30,6 +35,7 @@ const AddComment = ({imageId}) => {
     reset();
     setHasSubmitted(false);
     setValidationErrors([]);
+    setShowErrors(false);
   };
 
   const reset = () => {
@@ -53,6 +59,7 @@ const AddComment = ({imageId}) => {
           type="text"
           value={comment}
           onChange={(e) => setComment(e.target.value)}
+          onBlur={(e) => setShowErrors(false)}
         // required
         />
       </label>
