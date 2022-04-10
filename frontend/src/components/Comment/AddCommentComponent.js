@@ -12,7 +12,7 @@ const AddComment = ({ imageId }) => {
 
   useEffect(() => {
     const errors = [];
-    if (comment.length > 25) errors.push('Comment should be 1000 characters or less');
+    if (comment.length > 500) errors.push('Comment should be 500 characters or less');
     if (comment.length < 2) errors.push("Comment must be 2 characters or more");
     setValidationErrors(errors)
   }, [comment]);
