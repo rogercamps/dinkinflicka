@@ -17,6 +17,15 @@ const AddComment = ({ imageId }) => {
     setValidationErrors(errors)
   }, [comment]);
 
+  useEffect(() => {
+    if (!showErrors) return;
+    const closeErrors = () => {
+      setShowErrors(false);
+    };
+    window.addEventListener('click', closeErrors)
+    reset();
+    return () => window.removeEventListener("click", closeErrors);
+  }, [showErrors]);
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -42,6 +51,10 @@ const AddComment = ({ imageId }) => {
     setComment("");
   };
 
+  // useEffect(() => {
+  //   setShowErrors([]);
+  // }, [comment])
+
   return (
     <form onSubmit={handleSubmit}>
       <ul>
@@ -59,12 +72,29 @@ const AddComment = ({ imageId }) => {
           type="text"
           value={comment}
           onChange={(e) => setComment(e.target.value)}
-          onBlur={(e) => setShowErrors(false)}
+          // onBlur={(e) => setShowErrors(false)}
+          // onBlur={(e) => {
+            // if (e.currentTarget === e.target) {
+              // setComment('')
+              // setShowErrors(false)
+            // } else {
+            //   console.log('unfocused child', e.target);
+            // }
+            // if (!e.currentTarget.contains(e.relatedTarget)) {
+            //   // Not triggered when swapping focus between children
+            //   console.log('out of comment box');
+            //   setValidationErrors([])
+            // }
+          // }}
+
         // required
         />
       </label>
     </form>
   )
 }
+
+
+
 
 export default AddComment;

@@ -31,11 +31,10 @@ const PhotoDetail = () => {
     <div className="photo-detail-div">
       <span className="photo-detail-title">{photo?.title}</span>
       <img src={photo?.imageUrl} alt='' className='photo-detail-image'></img>
-      <CommentComponentIndex />
       <div className='edit-title-modal'>
         {sessionUser && sessionUser?.id === photo?.userId && (
           <>
-            <button onClick={() => setShowModal(true)}>Edit</button>
+            <button onClick={() => setShowModal(true)}>Edit image title</button>
             <button onClick={() => handleDelete(photoId)} className='photo-detail-delete-btn'>
               Delete
             </button>
@@ -49,9 +48,10 @@ const PhotoDetail = () => {
           </>
         )}
       </div>
-        <AddCommentComponent imageId={photoId} />
       <div>
+        <AddCommentComponent imageId={photoId} />
       </div>
+      <CommentComponentIndex />
     </div>
   )
 }
