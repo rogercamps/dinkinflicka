@@ -15,6 +15,15 @@
   border-radius: 5px;
 }
 
+#login-form-id > label:nth-child(2) > input {
+  position: relative;
+  left: calc(5%)
+}
+#login-form-id > label:nth-child(3) > input {
+  position: relative;
+  left: calc(32%)
+}
+
 .get-started {
   font-size: 26px;
   text-decoration: none;

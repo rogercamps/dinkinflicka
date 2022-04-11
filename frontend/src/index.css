@@ -2,7 +2,6 @@
 * {
   font-family: 'American Typewriter', sans-serif;
   max-width: 100%;
-  overflow-x: hidden;
 }
 
 .nav-signup {
@@ -55,21 +54,26 @@ html, body {
   font-family: 'American Typewriter'
   }
 
+.photo-index-navlink > img {
+  overflow: hidden;
+}
+
 .photo-index-navlink {
   max-width: 500px;
   background-color: #648cac;
   box-shadow: 0 0 20px black;
   border: 2px solid pink;
   height: 300px;
-  text-decoration: none !important;
+  text-decoration: none;
   color: black;
+  overflow: hidden;
 }
 .photo-index-nav {
   background-color: #b2b6b0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  height: 100vh;
+  height: 100%;
   padding: 25px 0 0 0;
 }
 
@@ -84,8 +88,7 @@ html, body {
   max-width: 600px;
   max-height: 300px;
   box-shadow: 0 0 5px black;
-  overflow-x:hidden;
-  overflow-y:hidden;
+
 }
 .photo-navlink {
   background-color: aqua;
@@ -282,6 +285,7 @@ img {
   left: calc(5%);
   /* width: 200px; */
 }
+
 
 input {
   width: auto;
