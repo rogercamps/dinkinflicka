@@ -73,7 +73,7 @@ function SignupFormPage() {
         </label>
         <button type="submit" className="signup-btn">Sign Up</button>
         <Link to='/' className='signup-cancel-btn'>Cancel</Link>
-        <p>Already have an account or want to skip signing up? Login or use our Demo User instead:</p>
+        <p>For Login or Demo User :</p>
         <LoginFormModal />
       </form>
     </div>

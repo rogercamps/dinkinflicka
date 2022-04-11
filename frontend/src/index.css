@@ -3,6 +3,7 @@
   font-family: 'American Typewriter';
   max-width: 100%;
   overflow-x: hidden;
+  object-fit: cover;
 }
 
 .nav-signup {
@@ -247,6 +248,7 @@ img {
   border: 1px solid black;
   width: 30%;
   padding: 30px;
+  position: relative;
 }
 
 input {
