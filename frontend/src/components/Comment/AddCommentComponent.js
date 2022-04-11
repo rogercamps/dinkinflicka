@@ -67,7 +67,7 @@ const AddComment = ({ imageId }) => {
         )}
       </ul>
       <label>
-        Comments
+        Add a comment:
         <input
           type="text"
           value={comment}

@@ -17,7 +17,7 @@ const CommentComponentIndex = () => {
 
   useEffect(() => {
     const errors = [];
-    if (comment.length > 500) errors.push('Comments should be 500 characters long or less')
+    if (comment.length > 100) errors.push('Comments should be 100 characters long or less')
     if (comment.length < 2) errors.push("Comments should be at least 2 characters long")
     setValidationErrors(errors)
     dispatch(getAllComments());
@@ -32,12 +32,12 @@ const CommentComponentIndex = () => {
       <nav className="comment-index-nav">
         {comments.filter(comment => comment.imageId === +photoId).map(comment =>
           <div key={comment?.id} className="comment-index-div">
-            <div>
               <span>{comment?.User.username} said:</span>
+            <div className="comment-body">
               {comment?.comment}
             </div>
             {sessionUser && sessionUser?.id === comment?.userId && (
-              <button onClick={() => handleDelete(comment?.id)} className='comment-delete-btn'>
+              <button onClick={() => handleDelete(comment?.id)} className='photo-detail-delete-btn'>
                 Delete
               </button>
             )}

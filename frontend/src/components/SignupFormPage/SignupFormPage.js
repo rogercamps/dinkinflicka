@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect, Link } from "react-router-dom";
 import * as sessionActions from "../../store/session";
+import LoginFormModal from '../LoginFormModal/LoginFormModal'
 
 function SignupFormPage() {
   const dispatch = useDispatch();
@@ -68,8 +69,10 @@ function SignupFormPage() {
           required
         />
       </label>
-      <button type="submit">Sign Up</button>
-      <Link to='/' className=''>Cancel</Link>
+      <button type="submit" className="signup-btn">Sign Up</button>
+      <Link to='/' className='signup-cancel-btn'>Cancel</Link>
+      <p>Already have an account or want to skip signing up? Login or use our Demo User instead:</p>
+      <LoginFormModal />
     </form>
   );
 }

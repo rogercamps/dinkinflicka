@@ -1,6 +1,30 @@
 /* TODO Add site wide styles */
 * {
-  font-family: 'American Typewriter'
+  font-family: 'American Typewriter';
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.nav-signup {
+  color: white;
+  text-decoration: none !important;
+}
+.signup-cancel-btn {
+  color: black;
+  text-decoration: none !important;
+}
+
+.signup-cancel-btn:hover {
+  color: red;
+}
+
+.alt-font {
+  font-family: 'tahoma', sans-serif;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
 }
 
 .navbar {
@@ -11,7 +35,7 @@
   top: 0;
   min-width: 100%;
   padding: 15px;
-  /* position: fixed; */
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -32,13 +56,15 @@
   background-color: #648cac;
   box-shadow: 0 0 20px black;
   border: 2px solid pink;
-
+  height: 300px;
 }
 .photo-index-nav {
   background-color: #b2b6b0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  height: 100vh;
+  padding: 25px 0 0 0;
 }
 
 .photo-index-navlink:hover {
@@ -51,19 +77,20 @@
   align-items: center;
   max-width: 600px;
   max-height: 300px;
-
+  box-shadow: 0 0 5px black;
 }
 .photo-navlink {
   background-color: aqua;
 }
 
 .photo-detail-title {
-  background-color: #A8A8A8;
+  /* background-color: #A8A8A8; */
+  font-size: 30px;
   margin: 5vh;
 }
 
 .photo-detail-delete-btn {
-  margin: 5vh;
+  margin: 1vh;
   background: red;
   font-size: 15px;
   border-radius: 5px;
@@ -72,10 +99,10 @@
   background: red;
   color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 5px aqua,
+  /* box-shadow: 0 0 5px aqua,
               0 0 25px aqua,
               0 0 50px aqua,
-              0 0 100px aqua;
+              0 0 100px aqua; */
               font-size: 15px;
 }
 
@@ -105,7 +132,7 @@
 }
 .photo-detail-image {
   width: 900px;
-
+  box-shadow: 0 0 5px black;
 }
 .photo-detail-div:child {
   margin: 20px;
@@ -116,7 +143,8 @@ img {
 }
 
 .edit-title-modal {
-  margin: 30px;
+  padding: 50px;
+  margin: 40px;
   color: red;
   height: 50px;
 }
@@ -124,5 +152,75 @@ img {
 #modal-content {
   margin: 30px;
   color: red;
-  height: 50px;
+}
+
+.add-image-form {
+  margin: 10px;
+}
+
+.comment-body {
+  padding: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  /* width: 95%; */
+}
+.comment-index-div {
+  margin: 10px;
+  padding: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: grey;
+  width: 600px;
+  box-shadow: 0 0 5px black;
+}
+
+.comment-delete-btn {
+  background-color: red;
+}
+
+.splash-component-outer-div{
+  padding: 50px;
+  border: 1px solid black;
+  position: absolute;
+  top: calc(30%);
+  left: calc(45%);
+  width: 100px;
+  height: 65px;
+  border-radius: 5px;
+  background-color: grey;
+  box-shadow: 0 0 5px black;
+}
+
+.splash-component-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-bg-image {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../public/images/mike-bg.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+input {
+  width: auto;
+  color: black;
+  padding: 10px 20px;
+  margin: 4px 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+label {
+  font-weight: 900;
+  padding: 5px;
+}
+
+
+button {
+  cursor: pointer;
 }

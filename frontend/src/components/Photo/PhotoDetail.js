@@ -34,7 +34,7 @@ const PhotoDetail = () => {
       <div className='edit-title-modal'>
         {sessionUser && sessionUser?.id === photo?.userId && (
           <>
-            <button onClick={() => setShowModal(true)}>Edit image title</button>
+            <button onClick={() => setShowModal(true)}>Edit title</button>
             <button onClick={() => handleDelete(photoId)} className='photo-detail-delete-btn'>
               Delete
             </button>

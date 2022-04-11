@@ -76,8 +76,9 @@ function AddPhotoForm() {
           </div>
         )}
       </ul>
-      <label>
-        Title
+      <div className='add-image-form'></div>
+      <label className='add-image-title'>
+        Add Title:
         <input
           type="text"
           value={title}
@@ -85,8 +86,8 @@ function AddPhotoForm() {
         // required
         />
       </label>
-      <label>
-        Image URL
+      <label className='add-image-url'>
+        Add Image URL:
         <input
           type="text"
           value={imageUrl}
