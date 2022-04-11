@@ -3,6 +3,18 @@
   height: 300px;
 }
 
+#login-form-id{
+  position: relative;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 60%;
+  width: 450px;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
 .get-started {
   font-size: 26px;
   text-decoration: none;

@@ -20,7 +20,7 @@ function LoginForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className='login-form-form'>
+    <form onSubmit={handleSubmit} id='login-form-id'className='login-form-form'>
       <ul>
         {errors.map((error, idx) => (
           <li key={idx}>{error}</li>
@@ -44,11 +44,11 @@ function LoginForm() {
           required
         />
       </label>
+      <button type="submit" className='modal-login-btn'>Log In</button>
       <button onClick={e => {
         setCredential("PrisonMike");
         setPassword("dementors");
-      }} type="submit">Demo User Login</button>
-      <button type="submit">Log In</button>
+      }} type="submit" className='modal-demo-user-btn'>Demo User Login</button>
     </form>
   );
 }

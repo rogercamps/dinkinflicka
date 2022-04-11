@@ -4,6 +4,7 @@ import { Redirect, Link } from "react-router-dom";
 import * as sessionActions from "../../store/session";
 import LoginFormModal from '../LoginFormModal/LoginFormModal'
 
+
 function SignupFormPage() {
   const dispatch = useDispatch();
   const sessionUser = useSelector((state) => state.session.user);
@@ -29,51 +30,53 @@ function SignupFormPage() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <ul>
-        {errors.map((error, idx) => <li key={idx}>{error}</li>)}
-      </ul>
-      <label>
-        Email
-        <input
-          type="text"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        Username
-        <input
-          type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        Password
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        Confirm Password
-        <input
-          type="password"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          required
-        />
-      </label>
-      <button type="submit" className="signup-btn">Sign Up</button>
-      <Link to='/' className='signup-cancel-btn'>Cancel</Link>
-      <p>Already have an account or want to skip signing up? Login or use our Demo User instead:</p>
-      <LoginFormModal />
-    </form>
+    <div className='signup-outer-form'>
+      <form onSubmit={handleSubmit} className='signup-inner-form'>
+        <ul>
+          {errors.map((error, idx) => <li key={idx}>{error}</li>)}
+        </ul>
+        <label>
+          Email
+          <input
+            type="text"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </label>
+        <label>
+          Username
+          <input
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
+        </label>
+        <label>
+          Password
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </label>
+        <label>
+          Confirm Password
+          <input
+            type="password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            required
+          />
+        </label>
+        <button type="submit" className="signup-btn">Sign Up</button>
+        <Link to='/' className='signup-cancel-btn'>Cancel</Link>
+        <p>Already have an account or want to skip signing up? Login or use our Demo User instead:</p>
+        <LoginFormModal />
+      </form>
+    </div>
   );
 }
 

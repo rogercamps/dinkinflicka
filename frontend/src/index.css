@@ -57,6 +57,8 @@ html, body {
   box-shadow: 0 0 20px black;
   border: 2px solid pink;
   height: 300px;
+  text-decoration: none !important;
+  color: black;
 }
 .photo-index-nav {
   background-color: #b2b6b0;
@@ -123,7 +125,7 @@ html, body {
 }
 
 .photo-detail-div {
-  /* background-color: fuchsia; */
+  background-color: grey;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -150,9 +152,34 @@ img {
 }
 
 #modal-content {
+  border-radius: 5px;
   margin: 30px;
-  color: red;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.modal {
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.modal-demo-user-btn {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.modal-login-btn {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
 
 .add-image-form {
   margin: 10px;
@@ -170,7 +197,7 @@ img {
   padding: 30px;
   border: 1px solid black;
   border-radius: 5px;
-  background-color: grey;
+  background-color: rgb(98, 111, 125);
   width: 600px;
   box-shadow: 0 0 5px black;
 }
@@ -204,6 +231,22 @@ img {
   background-image: url('../public/images/mike-bg.jpeg');
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.signup-outer-form {
+  display: flex;
+  justify-content: center;
+  margin-top: calc(10%);
+}
+
+.signup-inner-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  width: 30%;
+  padding: 30px;
 }
 
 input {
