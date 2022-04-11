@@ -15,7 +15,7 @@ function AddPhotoForm() {
   useEffect(() => {
     const errors = [];
     if (title.length > 25) errors.push('Title should be 25 characters or less')
-    if (title.length === 0) errors.push("Title can't be blank")
+    if (title.length < 1) errors.push("Title can't be blank")
     if (imageUrl.match(/(jpe?g|tiff|png|gif|bmp)/) === null) errors.push('This image link is not an accepted format')
     setValidationErrors(errors)
   }, [title, imageUrl])
