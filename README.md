@@ -9,7 +9,6 @@ DinkinFlicka is a site where you can go mach 5 and post your most zippity zoppit
 
 ## Technologies Used
 ***
-![alt text](https://github.com/Workshape/tech-icons/blob/master/icons/expressjs.svg)
    ![alt text](https://github.com/Workshape/tech-icons/blob/master/icons/git.svg)
    ![alt text](https://github.com/Workshape/tech-icons/blob/master/icons/heroku.svg)
    ![alt text](https://github.com/Workshape/tech-icons/blob/master/icons/javascript.svg)
