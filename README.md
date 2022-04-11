@@ -7,6 +7,17 @@ DinkinFlicka is a site where you can go mach 5 and post your most zippity zoppit
 ***
 `https://dinkinflicka.herokuapp.com`
 
+## Technologies Used
+***
+![alt text](https://github.com/Workshape/tech-icons/blob/master/icons/expressjs.svg)
+   ![alt text](https://github.com/Workshape/tech-icons/blob/master/icons/git.svg)
+   ![alt text](https://github.com/Workshape/tech-icons/blob/master/icons/heroku.svg)
+   ![alt text](https://github.com/Workshape/tech-icons/blob/master/icons/javascript.svg)
+   ![alt text](https://github.com/Workshape/tech-icons/blob/master/icons/nodejs.svg)
+   ![alt text](https://github.com/Workshape/tech-icons/blob/master/icons/postgres.svg)
+   ![alt text](https://github.com/Workshape/tech-icons/blob/master/icons/react.svg)
+   ![alt text](https://github.com/Workshape/tech-icons/blob/master/icons/expressjs.svg)
+   
 ## Wiki
 ***
 [db Schema](https://github.com/rogercamps/dinkinflicka/wiki/DB-Schema) |
