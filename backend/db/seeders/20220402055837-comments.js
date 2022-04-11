@@ -18,7 +18,7 @@ module.exports = {
       imageId: 1
     },
     {
-      userId: 2,
+      userId: 1,
       comment: 'fun times',
       imageId: 1
     },
@@ -48,7 +48,7 @@ module.exports = {
       imageId: 2
     },
     {
-      userId: 1,
+      userId: 3,
       comment: 'Diversity tomorrow, because today is almost over',
       imageId: 3
     },
@@ -68,48 +68,48 @@ module.exports = {
       imageId: 4
     },
     {
-      userId: 4,
+      userId: 3,
       comment: 'f I don not have some cake soon, I might die',
       imageId: 4
     },
     {
-      userId: 4,
+      userId: 3,
       comment: 'If you didnt already know, prison isnt a fun place',
       imageId: 4
     },
     {
-      userId: 4,
+      userId: 3,
       comment: 'love this picture!',
       imageId: 4
     },
     {
-      userId: 4,
+      userId: 3,
       comment: 'Would Smokey Bear be proud?',
       imageId: 4
     },
     {
-      userId: 4,
+      userId: 3,
       comment: 'Where is the line drawn on quality of life?',
       imageId: 4
     },
     {
-      userId: 4,
+      userId: 3,
       comment: 'I am running away from my responsibilities. And it feels good.',
       imageId: 5
     },
     ,
     {
-      userId: 4,
+      userId: 1,
       comment: 'I just want to lie on the beach and eat hot dogs. Thats all Ive ever wanted..',
       imageId: 5
     },
     {
-      userId: 4,
+      userId: 1,
       comment: 'And I knew exactly what to do. But in a much more real sense, I had no idea what to do.',
       imageId: 5
     },
     {
-      userId: 4,
+      userId: 1,
       comment: 'There is a lot of beauty in ordinary things. Isnt that kind of the point?.',
       imageId: 5
     }
