@@ -2,8 +2,6 @@
 * {
   font-family: 'American Typewriter';
   max-width: 100%;
-  overflow-x: hidden;
-  object-fit: cover;
 }
 
 .nav-signup {
@@ -81,6 +79,8 @@ html, body {
   max-width: 600px;
   max-height: 300px;
   box-shadow: 0 0 5px black;
+  overflow-x:hidden;
+  overflow-y:hidden;
 }
 .photo-navlink {
   background-color: aqua;
@@ -256,12 +256,11 @@ input {
   color: black;
   padding: 10px 20px;
   margin: 4px 0;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 label {
-  font-weight: 900;
   padding: 5px;
 }
 
