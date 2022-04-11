@@ -45,10 +45,10 @@ function LoginForm() {
         />
       </label>
       <button type="submit" className='modal-login-btn'>Log In</button>
-      <button onClick={e => {
+      {/* <button onClick={e => {
         setCredential("PrisonMike");
         setPassword("dementors");
-      }} type="submit" className='modal-demo-user-btn'>Demo User Login</button>
+      }} type="submit" className='modal-demo-user-btn'>Demo User Login</button> */}
     </form>
   );
 }

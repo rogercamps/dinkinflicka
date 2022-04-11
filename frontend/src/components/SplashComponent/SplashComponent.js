@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import Demo from '../LoginFormModal/Demo'
 
 function SplashComponent() {
 
@@ -9,7 +10,7 @@ function SplashComponent() {
         <div className="splash-component-outer-div">
           <div className="splash-component-inner-div">
             <NavLink to='/signup' className='get-started'>Get started</NavLink>
-            {/* <p className="splash-text">Login or Signup (Demo User vailable within the Login form)</p> */}
+            <Demo />
           </div>
         </div>
       </div>
