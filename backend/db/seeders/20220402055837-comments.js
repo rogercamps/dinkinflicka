@@ -97,7 +97,6 @@ module.exports = {
       comment: 'I am running away from my responsibilities. And it feels good.',
       imageId: 5
     },
-    ,
     {
       userId: 1,
       comment: 'I just want to lie on the beach and eat hot dogs. Thats all Ive ever wanted..',
