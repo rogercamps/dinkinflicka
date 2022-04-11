@@ -2,6 +2,7 @@
 * {
   font-family: 'American Typewriter';
   max-width: 100%;
+  overflow-x: hidden;
 }
 
 .nav-signup {
@@ -24,6 +25,7 @@
 html, body {
   padding: 0;
   margin: 0;
+
 }
 
 .navbar {
@@ -87,7 +89,6 @@ html, body {
 }
 
 .photo-detail-title {
-  /* background-color: #A8A8A8; */
   font-size: 30px;
   margin: 5vh;
 }
@@ -102,11 +103,7 @@ html, body {
   background: red;
   color: #fff;
   border-radius: 5px;
-  /* box-shadow: 0 0 5px aqua,
-              0 0 25px aqua,
-              0 0 50px aqua,
-              0 0 100px aqua; */
-              font-size: 15px;
+  font-size: 15px;
 }
 
 .photo-detail-delete-btn:active {
@@ -256,11 +253,12 @@ input {
   color: black;
   padding: 10px 20px;
   margin: 4px 0;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 label {
+  font-weight: 900;
   padding: 5px;
 }
 
