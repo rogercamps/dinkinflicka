@@ -103,7 +103,11 @@ html, body {
   background: red;
   color: #fff;
   border-radius: 5px;
-  font-size: 15px;
+  /* box-shadow: 0 0 5px aqua,
+              0 0 25px aqua,
+              0 0 50px aqua,
+              0 0 100px aqua; */
+              font-size: 15px;
 }
 
 .photo-detail-delete-btn:active {
@@ -111,7 +115,11 @@ html, body {
   background: red;
   color: #fff;
   border-radius: 5px;
-  font-size: 15px;
+  box-shadow: 0 0 5px aqua,
+              0 0 25px aqua,
+              0 0 50px aqua,
+              0 0 100px aqua;
+              font-size: 15px;
 }
 
 .photo-nav {
@@ -242,7 +250,6 @@ img {
   width: 30%;
   padding: 30px;
   position: relative;
-  box-shadow: 0 0 5px black;
 }
 
 input {

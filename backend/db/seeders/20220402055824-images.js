@@ -16,8 +16,7 @@ module.exports = {
       {
         userId: 1,
         imageUrl: 'https://assets.vogue.com/photos/5f47c140158c4d94d6bd8072/16:9/w_1280,c_limit/officesocial.jpg',
-        title: 'Roasted',
-
+        title: 'Roasted'
       },
       {
         userId: 1,
@@ -32,8 +31,7 @@ module.exports = {
       {
         userId: 1,
         imageUrl: 'https://www.hallofseries.com/wp-content/uploads/2020/12/The-Office-e1615447138425.jpg',
-        title: "That's what she said!",
-
+        title: "That's what she said!"
       },
       {
         userId: 1,
@@ -48,8 +46,7 @@ module.exports = {
       {
         userId: 1,
         imageUrl: 'https://pyxis.nymag.com/v1/imgs/a91/fc7/63264599bc070bf398b8d59c1260c7cba9-23-the-office-fire-drill-scene.rhorizontal.w1100.jpg',
-        title: 'Fire drill',
-
+        title: 'Fire drill'
       },
       {
         userId: 1,
@@ -64,8 +61,7 @@ module.exports = {
       {
         userId: 2,
         imageUrl: 'https://www.looper.com/img/gallery/the-office-scene-you-never-got-to-see-is-finally-available/michaels-toilet-tragedy-turns-to-toilet-humor-1641323770.jpg',
-        title: 'ATTRM',
-
+        title: 'ATTRM'
       },
       {
         userId: 2,
@@ -80,8 +76,7 @@ module.exports = {
       {
         userId: 2,
         imageUrl: 'https://www.thewrap.com/wp-content/uploads/2021/01/office-1.jpg',
-        title: 'Beach day',
-
+        title: 'Beach day'
       },
       {
         userId: 2,
@@ -96,8 +91,7 @@ module.exports = {
       {
         userId: 3,
         imageUrl: 'https://cdn3.whatculture.com/images/2019/08/962dd71560dc2d5a-600x338.jpg',
-        title: 'Goodbye Michael',
-
+        title: 'Goodbye Michael'
       },
       {
         userId: 3,
@@ -122,8 +116,7 @@ module.exports = {
       {
         userId: 4,
         imageUrl: 'https://i.pinimg.com/originals/4f/3e/48/4f3e48fa0a7e5e09eaf93ba5fe155d2d.jpg',
-        title: 'On set',
-
+        title: 'On set'
       },
       {
         userId: 4,
@@ -138,8 +131,7 @@ module.exports = {
       {
         userId: 4,
         imageUrl: 'https://external-preview.redd.it/iSiL6VTNId_B7PF4xQrvcuLss9BROsZBvL_nXqlEbFM.jpg?auto=webp&s=5e026084fb5beb9332a2cfe3483a907d2424624f',
-        title: 'Meredith ?',
-
+        title: 'Meredith ?'
       },
       {
         userId: 4,
@@ -154,8 +146,7 @@ module.exports = {
       {
         userId: 4,
         imageUrl: 'https://static.wikia.nocookie.net/theoffice/images/9/9e/Bald_Meredith.jpg/revision/latest/scale-to-width-down/1920?cb=20210304190858',
-        title: 'meredith !!',
-
+        title: 'meredith !!'
       },
       {
         userId: 4,
@@ -170,8 +161,7 @@ module.exports = {
       {
         userId: 4,
         imageUrl: 'https://static3.srcdn.com/wordpress/wp-content/uploads/2019/08/Angela-Meredith-Phyllis-Pam-And-Michael-From-The-Office.jpg?q=50&fit=crop&w=740&h=370&dpr=1.5://assets.vogue.com/photos/5f47c140158c4d94d6bd8072/16:9/w_1280,c_limit/officesocial.jpg',
-        title: 'Ladies man',
-
+        title: 'Ladies man'
       },
       {
         userId: 4,
@@ -186,8 +176,7 @@ module.exports = {
       {
         userId: 4,
         imageUrl: 'https://cdn.mos.cms.futurecdn.net/WpLYfyPnuLgbdzAQhrKeZj-1200-80.jpg',
-        title: 'Field trip to Uthica',
-
+        title: 'Field trip to Uthica'
       }
     ], {});
   },
