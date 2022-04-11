@@ -9,10 +9,26 @@ function UpdatePhoto({ photo, hideModal }) {
   const dispatch = useDispatch();
   const { photoId } = useParams();
   const [title, setTitle] = useState(photo.title);
-  const [errors, setErrors] = useState([]);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
+  const [validationErrors, setValidationErrors] = useState([]);
+  const [showErrors, setShowErrors] = useState(false);
+  // const [errors, setErrors] = useState([]);
+
+
+  useEffect(() => {
+    const errors = [];
+    if (title.length > 25) errors.push('Title should be 25 characters or less')
+    if (title.length < 1) errors.push("Title can't be blank")
+    setValidationErrors(errors)
+  }, [title])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setShowErrors(true);
+
+    if (validationErrors.length) {
+      return setHasSubmitted(true);
+    }
 
     const payload = {
       ...photo,
@@ -20,6 +36,8 @@ function UpdatePhoto({ photo, hideModal }) {
     };
 
     await dispatch(editPhoto(payload));
+    setValidationErrors([]);
+    setShowErrors(false);
     hideModal()
   };
 
@@ -35,7 +53,7 @@ function UpdatePhoto({ photo, hideModal }) {
   return (
     <form onSubmit={handleSubmit}>
       <ul>
-        {errors.map((error) => <li key={error}>{error}</li>)}
+        {validationErrors.map((error) => <li key={error}>{error}</li>)}
       </ul>
       <div className="update-title">
         <label>
