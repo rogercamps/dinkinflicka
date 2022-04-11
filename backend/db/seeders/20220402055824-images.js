@@ -31,12 +31,12 @@ module.exports = {
       {
         userId: 1,
         imageUrl: 'https://www.hallofseries.com/wp-content/uploads/2020/12/The-Office-e1615447138425.jpg',
-        title: "That's what she said!"
+        title: "That's what she said"
       },
       {
         userId: 1,
         imageUrl: 'https://areajugones.sport.es/wp-content/uploads/2021/11/1366-2000-1.jpg',
-        title: "Who's going to be manager?"
+        title: "Who's manager?"
       },
       {
         userId: 1,
@@ -121,7 +121,7 @@ module.exports = {
       {
         userId: 4,
         imageUrl: 'https://s.studiobinder.com/wp-content/uploads/2020/03/The-Office-Script-Teardown-Featured-StudioBinder.jpg',
-        title: 'Season 1 poster'
+        title: 'Season 1'
       },
       {
         userId: 4,
@@ -141,7 +141,7 @@ module.exports = {
       {
         userId: 4,
         imageUrl: 'https://www.looper.com/img/gallery/bloopers-in-the-office-that-were-better-than-the-original-scene/l-intro-1608580838.jpg',
-        title: "World's best boss"
+        title: "best boss"
       },
       {
         userId: 4,
@@ -156,7 +156,7 @@ module.exports = {
       {
         userId: 4,
         imageUrl: 'https://m.media-amazon.com/images/M/MV5BMDEwZmZjYTEtZDNiZC00MDg3LWI1M2UtNTM1NDc3MjVmY2I4XkEyXkFqcGdeQXVyNzExMzc0MDg@._V1_.jpg',
-        title: 'Office safety officer'
+        title: 'safety officer'
       },
       {
         userId: 4,
@@ -171,12 +171,12 @@ module.exports = {
       {
         userId: 4,
         imageUrl: 'https://static.fandomspot.com/images/05/6404/00-featured-kevin-spills-chili-the-office.jpg',
-        title: 'This is what I do best'
+        title: 'Chili'
       },
       {
         userId: 4,
         imageUrl: 'https://cdn.mos.cms.futurecdn.net/WpLYfyPnuLgbdzAQhrKeZj-1200-80.jpg',
-        title: 'Field trip to Uthica'
+        title: 'Off to Uthica'
       }
     ], {});
   },
