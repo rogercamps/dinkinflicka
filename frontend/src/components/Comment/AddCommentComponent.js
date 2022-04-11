@@ -74,6 +74,7 @@ const AddComment = ({ imageId }) => {
           onChange={(e) => setComment(e.target.value)}
         />
       </label>
+      <button>Submit</button>
     </form>
   )
 }
