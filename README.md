@@ -31,6 +31,12 @@ https://github.com/rogercamps/dinkinflicka.git
 ```sh
 npm install
 ```
+Create a POSTGRESQL user with CREATEDB and PASSWORD in PSQL.
+`CREATE USER <name> WITH CREATEDB PASSWORD <'password'>`
+Create a .env file in the backend directory based on the .env example found within the respective directory.
+Enter your username and password information into your .env file along with your desired database name, a secured combination of characters for you JWT_SECRET, your desired PORT (preferably 5000)
+Add the following proxy to your package.json file within your frontend directory, replacing or keeping the 5000 port to match yourt PORT configuration found in your .env file.
+```"proxy": "http://localhost:5000"```
 
 ***
 - To use this app, open two terminals, navigate through this app's directories on both terminals, and in one of them get into the `backend` directory, and on the other one go inside the `frontend` directory, once there, in both of the terminals run:
